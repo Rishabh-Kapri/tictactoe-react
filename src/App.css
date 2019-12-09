@@ -1,0 +1,36 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.Status {
+	background-color: #c94c4c; 
+	color: #fff;
+	border: 4px solid #cfc8b8;
+	border-radius: 20px;
+	font-size: 2em;
+	font-weight: bold;
+	margin: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 385px;
+	text-align: center;
+}
+
+.Status.X {
+	background-color: #524a4c;
+}
+
+.Status.O {
+	background-color: #6b948c;
+}
+
+.Status.Tie {
+	background-color: #667292
+}
+
+.Game {
+
+}

@@ -1,0 +1,30 @@
+.Square {
+	background: gray;
+	border: 3px solid #cfc8b8;
+	color: #cfc8b8;
+	font-size: 4em;
+	font-weight: bold;
+	height: 125px;
+	width: 125px; 
+	text-align: center;
+}
+
+.Square:focus {
+	outline: none;
+}
+
+.Square:hover {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  background-color: #e6e2da;
+  cursor: pointer;
+}
+
+
+.Square.X {
+	background-color: #524a4c;
+}
+
+.Square.O {
+	background-color: #6b948c;
+}
