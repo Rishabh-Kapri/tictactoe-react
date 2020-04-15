@@ -1,16 +1,17 @@
 .App {
+	height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
+  justify-content: center;
 }
 
-.Status {
-	background-color: #c94c4c; 
+.Move {
+	/*background-color: #c94c4c; */
 	color: #fff;
-	border: 4px solid #cfc8b8;
+	border: 2px solid #fff;
 	border-radius: 20px;
-	font-size: 2em;
+	font-size: 1.7em;
 	font-weight: bold;
 	margin: 10px;
 	padding-top: 5px;
@@ -19,15 +20,15 @@
 	text-align: center;
 }
 
-.Status.X {
-	background-color: #524a4c;
+.Move.X {
+	background-color: #702632;
 }
 
-.Status.O {
-	background-color: #6b948c;
+.Move.O {
+	background-color: #525e8b;
 }
 
-.Status.Tie {
+.Move.Tie {
 	background-color: #667292
 }
 

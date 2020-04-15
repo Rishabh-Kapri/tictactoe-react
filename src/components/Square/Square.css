@@ -1,7 +1,6 @@
 .Square {
-	background: gray;
-	border: 3px solid #cfc8b8;
-	color: #cfc8b8;
+	background-color: transparent;
+	/*border: 3px solid #fff;*/
 	font-size: 4em;
 	font-weight: bold;
 	height: 125px;
@@ -14,17 +13,37 @@
 }
 
 .Square:hover {
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
-  background-color: #e6e2da;
-  cursor: pointer;
+    cursor: pointer;
+    /*content: 'A';*/
+    transition: all 1.5s ease;
 }
-
 
 .Square.X {
-	background-color: #524a4c;
+	color: #702632;
+	/*transition: opacity .3s;*/
+	/*text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.3);*/
 }
 
+/*.Square.X:hover {
+	opacity: .4;
+}
+*/
 .Square.O {
-	background-color: #6b948c;
+	color: #525e8b;
+}
+
+.Top {
+	border-top: none;
+}
+
+.Left {
+	border-left: none;
+}
+
+.Right {
+	border-right: none;
+}
+
+.Bottom {
+	border-bottom: none;
 }

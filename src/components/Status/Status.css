@@ -1,0 +1,74 @@
+.Status {
+	user-select: none;
+	font-family: 'Raleway', sans-serif;
+}
+
+.Status p {
+	color: #fff;
+	display: inline-block;
+	font-size: 1.05em;
+	font-weight: 400;
+	margin: 20px 15px;
+	padding: 0px;
+	text-align: center;
+}
+
+.Status .Score {
+	display: block;
+	font-size: 1.25em;
+	padding-top: 15px;
+}
+
+.Status.p1 {
+	/*background-color: red;*/
+}
+
+.Status.p2 {
+
+}
+
+.Switch {
+	margin: 20px 0px;
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	opacity: .5;
+	transition: all .3s ease-out;
+}
+
+.Switch button {
+	border-radius: 10px;
+	border: none;
+	font-size: 1.05em;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.Switch p {
+	display: block;
+	font-size: 1em;
+	width: 100%;
+	margin: 0;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.Switch:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+.Player1, .Player2 {
+	width: 125px;
+}
+
+.Hide {
+	opacity: .5;
+}
+
+.Hidden {
+	display: none !important;
+}
+
+
+
