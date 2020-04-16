@@ -7,6 +7,15 @@ import NewGame from './components/NewGame/NewGame';
 import './App.css';
 
 class App extends Component {
+  initialState = {
+    gameBoard: Array(9).fill(null),
+    isXNext: true,  // X is always first
+    route: 'newgame', // human's value
+    gameMode: 1, // 1 = 1p, 2 = 2p
+    // 0 = ai, 1 = human
+    X: -1,
+    O: -1
+  }
   constructor() {
     super()
     this.state = {
@@ -18,7 +27,9 @@ class App extends Component {
       X: -1,
       O: -1
     }
-    this.initialState = this.state;
+  }
+
+  componentDidUpdate() {
   }
 
   onMoveChange = (id) => {
@@ -42,17 +53,13 @@ class App extends Component {
 
   makeMove(turn, currentBoard, id) {
     if (this.state[turn] === 0) {
-      console.log('ai turn ', turn);
       const human = turn === 'X' ? 'O' : 'X';
       const move = Ai(currentBoard.slice(), turn, human);
+      console.log(move, turn, human);
       currentBoard[move] = turn;
       this.setState({
         gameBoard: currentBoard,
-        isXNext: !this.isXNext
-      }, () => {
-        if (this.state['X'] === 1) {
-          // this.onMoveChange(-1);
-        }
+        isXNext: !this.state.isXNext
       });
     } else if (this.state[turn] === 1) {
       currentBoard[id] = turn;
@@ -66,12 +73,13 @@ class App extends Component {
   }
 
   choosePlayer = (player) => {
+    this.setState(this.initialState);
     this.setState({
       X: player === 'X' ? 1 : 0,
       O: player === 'O' ? 1 : 0,
       route: player
     }, () => {
-      if (this.state['X'] === 0) {
+      if (this.state.X === 0) {
         this.onMoveChange(-1);
       }
     });
