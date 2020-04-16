@@ -9,6 +9,8 @@ let scores = {
 const Ai = (currentBoard, ai, human) => {
 	if (ai === 'X') {
 		Object.assign(scores, { X: 1, O: -1 });
+	} else {
+		Object.assign(scores, { X: -1, O: 1 })
 	}
 	let bestScore = -Infinity;
 	let move = -1;
